@@ -21,13 +21,17 @@ h1 {
     box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
 }
 
+.inputBox {
+    margin-right: 10px;
+}
+
 button {
     height: 30px;
     padding: 0 .75rem;
 }
 
 .result {
-    width: 300px;
+    width: 400px;
     font-size: 12px;
     text-transform: uppercase;
     margin: 0 auto;
