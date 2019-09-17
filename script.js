@@ -73,11 +73,35 @@ function guess(number) {
     return "ошибка";
 }
 
+const render = data => {
+    const card = `
+        <div class = "person">
+            name: <div class = "person__name"> ${data.name} </div>
+            birth year: <div class = "person__birth-year" > ${data.birth_year} </div>
+            gender: <div class = "person__gender" > ${data.gender} </div>
+            mass: <div class = "person__mass" > ${data.mass} </div> 
+        </div>
+        `
+    const $card = $(card);
+    $card.appendTo(document.body);
+}
+
+
 $(document).ready(function () {
-    $(".btn").click(function () {
+    $(".btnF1").click(function () {
         const inputValue = $("input").val();
         const resultValue = guess(+inputValue);
         const $result = $(".result");
         $result.html(resultValue);
     });
+
+    $(".btnF2").click(function () {
+        $.getJSON(
+            'https:/swapi.co/api/people/1/',
+            function (data) {
+                render(data)
+            }
+        );
+    });
+
 });

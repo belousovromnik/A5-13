@@ -41,3 +41,26 @@ button {
 .btn {
     padding: 0 5px;
 }
+
+
+body {
+    font-family: sans-serif;
+}
+
+.person {
+    border-left: 2px tomato solid;
+    padding-left: 15px;
+}
+
+.person__name,
+.person__birth-year,
+.person__gender,
+.person__mass {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: tomato;
+}
+
+div {
+    margin-bottom: 20px;
+}
